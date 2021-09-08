@@ -1,0 +1,10 @@
+FROM 171861607364.dkr.ecr.sa-east-1.amazonaws.com/superdigital/icu-dotnet-runtime-debian:2.2-debian
+WORKDIR /app
+
+RUN mkdir ./Super.Antifraude.Whitelist.CronJob
+
+COPY Super.Antifraude.Whitelist.CronJob ./Super.Antifraude.Whitelist.CronJob
+
+WORKDIR /app/Super.Antifraude.Whitelist.CronJob
+EXPOSE 80
+ENTRYPOINT ["/app/entrypoint.sh", "Super.Antifraude.Whitelist.CronJob.dll"]

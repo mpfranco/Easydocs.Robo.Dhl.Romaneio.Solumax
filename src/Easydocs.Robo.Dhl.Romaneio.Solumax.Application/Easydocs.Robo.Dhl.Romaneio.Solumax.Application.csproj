@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FileHelpers" Version="3.4.1" />
+    <PackageReference Include="Flunt" Version="1.0.3" />
+    <PackageReference Include="MediatR" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npoi.Mapper" Version="3.5.0" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
+	  <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+	  <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Consumers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Easydocs.Robo.Dhl.Romaneio.Solumax.Domain\Easydocs.Robo.Dhl.Romaneio.Solumax.Domain.csproj" />
+    <ProjectReference Include="..\Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared\Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+</Project>
