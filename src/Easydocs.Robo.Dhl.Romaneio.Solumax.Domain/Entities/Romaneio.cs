@@ -43,6 +43,8 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Domain.Entities
         public string DATA_PROXIMA_CAPTURA { get; set; }
         public string Nr_romaneio { get; set; }
         public int Nr_Paginas { get; set; }
+        public string UrlImagem { get; set; }
+        public Int16 Pagina { get; set; }
         public void AssociateId(long id)
         {
             Id = id;

@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Folder Include="Consumers\" />
+    <Folder Include="Mappers\" />
   </ItemGroup>
 
   <ItemGroup>

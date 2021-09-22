@@ -12,9 +12,9 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Data.Repository.Invo
 
     public class RepositoryRomaneio : RepositoryBase<Domain.Entities.romaneio>, IFindInvoice
     {
-        private readonly RoboVazFielSettings _roboVazFielSettings;        
+        private readonly RoboSolumaxSettings _roboVazFielSettings;        
         public RepositoryRomaneio(IConfiguration configuration
-                                , RoboVazFielSettings roboVazFielSettings) : base(configuration)
+                                , RoboSolumaxSettings roboVazFielSettings) : base(configuration)
         {
             _roboVazFielSettings = roboVazFielSettings;
         }

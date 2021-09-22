@@ -11,9 +11,8 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Bootstrap.Extensions
         public static void AddSettings(this IServiceCollection services, IConfiguration configuration)
         {
             //Settings
-
-            services.Configure<RoboVazFielSettings>(configuration.GetSection("Robo.VazFiel"));
-            services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<RoboVazFielSettings>>().Value);
+            services.Configure<RoboSolumaxSettings>(configuration.GetSection("Robo.Solumax"));
+            services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<RoboSolumaxSettings>>().Value);
             
         }
     }

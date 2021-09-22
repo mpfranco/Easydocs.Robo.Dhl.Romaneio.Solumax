@@ -3,11 +3,11 @@ using System;
 
 namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Services
 {
-    public class LoggerOccurency : ILoggerOccurrency
+    public class LoggerRomaneio : ILoggerRomaneio
     {
-        readonly ILogger<LoggerOccurency> _logger;
+        readonly ILogger<LoggerRomaneio> _logger;
         public Guid TraceId { get; private set; }
-        public LoggerOccurency(ILogger<LoggerOccurency> logger)
+        public LoggerRomaneio(ILogger<LoggerRomaneio> logger)
         {
             _logger = logger;
             TraceId = Guid.NewGuid();

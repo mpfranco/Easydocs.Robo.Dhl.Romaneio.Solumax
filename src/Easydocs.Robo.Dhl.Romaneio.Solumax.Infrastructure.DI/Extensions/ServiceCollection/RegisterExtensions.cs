@@ -10,7 +10,7 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Bootstrap.Extensions
         public static IServiceCollection AddDependencyInjection(this IServiceCollection services)
         {
             services.AddScoped<IFindRomaneioService, FindRomaneioService>();
-            services.AddScoped<ILoggerOccurrency, LoggerOccurency>();  
+            services.AddScoped<ILoggerRomaneio, LoggerRomaneio>();  
             return services;
         }
     }

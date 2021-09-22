@@ -24,8 +24,8 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Data.Repository.Base
 
         protected RepositoryBase(IConfiguration configuration)
         {
-            //_connection = new SqlConnection(configuration.GetSection("ConnectionStrings:RoboVazFiel").Value);
-            _connection = new NpgsqlConnection(configuration.GetSection("ConnectionStrings:RoboVazFiel").Value);
+            //_connection = new SqlConnection(configuration.GetSection("ConnectionStrings:RoboSolumax").Value);
+            _connection = new NpgsqlConnection(configuration.GetSection("ConnectionStrings:RoboSolumax").Value);
 
             if (_connection.State != ConnectionState.Open && _connection.State != ConnectionState.Connecting)
                 _connection.Open();

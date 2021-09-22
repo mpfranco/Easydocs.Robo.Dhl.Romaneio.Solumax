@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Services
 {
-    public interface ILoggerOccurrency
+    public interface ILoggerRomaneio
     {
         Guid TraceId { get; }
         /// <summary>

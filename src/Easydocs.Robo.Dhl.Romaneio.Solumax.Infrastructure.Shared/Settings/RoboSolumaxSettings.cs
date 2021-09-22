@@ -1,7 +1,7 @@
 ﻿
 namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Settings
 {
-    public class RoboVazFielSettings
+    public class RoboSolumaxSettings
     {        
         public string urlBase { get; set; }
         public string urlInvoice { get; set; }
@@ -13,7 +13,9 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Settings
         public string queryFindInvoicesPending { get; set; }
         public string queryUpdateInvoice { get; set; }
         public string queryUpdateInvoice_2 { get; set; }
-
+        public string conta { get; set; }
+        public string dataInicial { get; set; }
+        public string dataFinal { get; set; }
 
     }
 }

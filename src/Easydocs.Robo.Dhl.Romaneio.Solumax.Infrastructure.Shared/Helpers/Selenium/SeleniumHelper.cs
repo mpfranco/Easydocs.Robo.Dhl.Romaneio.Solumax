@@ -13,21 +13,20 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Helpers
     {
         public WebDriverWait Wait;
         public ChromeDriver driver;
-        //public IWebDriver WebDriver;
         public SeleniumHelper(string directoryTemp)
         {
-            //WebDriver = WebDriverFactory.CreateWebDriver(Browser.Chrome, "C:\\WebDriver", true);
-            //WebDriver.Manage().Window.Maximize();
-            //Wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(30));
+            
 
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddArguments("--disable-notifications");
+            chromeOptions.AddArguments("--disable-notifications"); 
+            chromeOptions.AddArguments("headless");
             chromeOptions.AddUserProfilePreference("download.default_directory", directoryTemp);
             chromeOptions.AddUserProfilePreference("intl.accept_languages", "nl");
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
+        
 
             driver = new ChromeDriver(@"C:\WebDriver", chromeOptions);
-            driver.Manage().Window.Maximize();
+            //driver.Manage().Window.Maximize();
             Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
         }
 
@@ -190,6 +189,7 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Helpers
             }
             
         }
+        
         public ReadOnlyCollection<IWebElement> ObterElementosPorName(string nameFind, string nameElementWait)
         {
             Wait.Until(ExpectedConditions.ElementIsVisible(By.Name(nameElementWait)));
@@ -210,6 +210,15 @@ namespace Easydocs.Robo.Dhl.Romaneio.Solumax.Infrastructure.Shared.Helpers
             var element = driver.FindElementByName(xpath);
             if (SwitchToFrame.Length > 0) driver.SwitchTo().DefaultContent();
             return element;
+        }
+
+        public IWebElement ObterElementoPorLinkText(string linkText)
+        {
+            return Wait.Until(ExpectedConditions.ElementIsVisible(By.LinkText(linkText)));
+        }
+        public IWebElement ObterElementosPorLinkText(string linkText)
+        {
+            return Wait.Until(ExpectedConditions.ElementIsVisible(By.LinkText(linkText)));
         }
         public List<string> finElementByRoot(string idRoot, string idElement, string valorCampo, string XPath)
         {
